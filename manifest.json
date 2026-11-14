@@ -1,0 +1,17 @@
+{
+  "version": 3,
+  "levels": {
+    "forest": {
+      "url": "https://raw.githubusercontent.com/USER/forest-and-ash/main/levels/forest.json",
+      "sha256": "<hash-forest>"
+    },
+    "cellar": {
+      "url": "https://raw.githubusercontent.com/USER/forest-and-ash/main/levels/cellar.json",
+      "sha256": "<hash-cellar>"
+    },
+    "tower": {
+      "url": "https://raw.githubusercontent.com/USER/forest-and-ash/main/levels/tower.json",
+      "sha256": "<hash-tower>"
+    }
+  }
+}

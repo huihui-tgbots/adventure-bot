@@ -1,0 +1,21 @@
+{
+  "name": "tower",
+  "rooms": {
+    "base": {
+      "desc": [
+        "The bottom of a spiralling stone tower. A narrow stair winds upward.",
+        {"if": "has('rope')", "then": "You could anchor the rope here, if you needed to climb down quickly."}
+      ],
+      "exits": {"down": "cellar:crypt", "up": "top"}
+    },
+    "top": {
+      "desc": [
+        "At the top of the tower the sky is very close. A single window looks out over the forest.",
+        {"if": "player.hp >= 8",
+         "then": "You feel steady. The world below is small and clear.",
+         "else": "Your hands shake. You steady yourself against the sill."}
+      ],
+      "exits": {"down": "base"}
+    }
+  }
+}

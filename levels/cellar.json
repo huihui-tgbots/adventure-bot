@@ -1,0 +1,21 @@
+{
+  "name": "cellar",
+  "rooms": {
+    "entry": {
+      "desc": [
+        "A low cellar. The ceiling drips. Barrels line the walls.",
+        {"if": "has('lantern')", "then": "Your lantern pushes the dark back to the corners."}
+      ],
+      "exits": {"up": "forest:clearing", "east": "crypt"},
+      "items": ["rope"]
+    },
+    "crypt": {
+      "desc": [
+        "A long crypt. Bones lie arranged in careful patterns along the floor.",
+        {"if": "player.stats.items > 2",
+         "then": "A cold voice whispers: you carry too much. Leave something behind."}
+      ],
+      "exits": {"west": "entry", "up": "tower:base"}
+    }
+  }
+}

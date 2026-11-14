@@ -1,0 +1,30 @@
+{
+  "name": "forest",
+  "rooms": {
+    "start": {
+      "desc": [
+        "Tall pines close around you. The air smells of wet bark and cold iron. A path leads east.",
+        {"if": "has('lantern')", "then": "Your lantern throws a small warm circle on the ground."}
+      ],
+      "exits": {"east": "clearing"}
+    },
+    "clearing": {
+      "desc": [
+        "The trees open into a mossy clearing. A stone well stands at the centre, a rusted lantern hanging from its post.",
+        {"if": "player.hp < 5", "then": "You are badly hurt. You should rest before going on."}
+      ],
+      "exits": {"west": "start", "east": "shrine", "down": "cellar:entry"},
+      "items": ["lantern"]
+    },
+    "shrine": {
+      "desc": [
+        "A small stone shrine, covered in ivy. Offerings sit on the altar: a coin, a feather, a knuckle of chalk.",
+        {"if": "has('coin') and count('feather') > 0",
+         "then": "The shrine hums quietly. It has accepted your gift.",
+         "else": "The shrine waits."}
+      ],
+      "exits": {"west": "clearing"},
+      "items": ["coin", "feather"]
+    }
+  }
+}
